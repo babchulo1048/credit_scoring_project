@@ -1,4 +1,5 @@
 Credit Scoring App
+
 A machine learning-based credit scoring application built with Python, Random Forest, SHAP, and Streamlit. This project predicts the probability of loan default, converts it to a credit score (300–900), and provides feature importance explanations using SHAP. The app allows users to input applicant details and view real-time predictions through a Streamlit interface.
 
 Table of Contents
@@ -15,12 +16,16 @@ Contributing
 License
 
 Overview
+
 This project demonstrates a credit scoring system that evaluates loan applicants based on features like age, job, housing, and credit amount. It uses a Random Forest model trained with SMOTE to handle class imbalance, and SHAP for explainability. The Streamlit app provides an interactive interface to input applicant data and view predictions, including risk probability, credit score, decision, and key factors influencing the outcome.
 Features
 
 Prediction: Estimates the probability of loan default using a Random Forest model.
+
 Credit Score: Maps risk probability to a 300–900 score (lower score = higher risk).
+
 Decision Logic: Approves or rejects applicants based on score thresholds:
+
 800–900: Excellent (Approve)
 700–799: Good (Approve)
 600–699: Fair (Maybe)
@@ -29,7 +34,9 @@ Decision Logic: Approves or rejects applicants based on score thresholds:
 
 
 Explainability: Uses SHAP to highlight top factors (e.g., Savings_accounts, Duration).
+
 Interactive UI: Streamlit app for user-friendly input and visualization.
+
 Deployment: Supports local or cloud deployment with ngrok for public access.
 
 Project Structure
