@@ -6,8 +6,12 @@ from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 
 # Load model and explainer
-model = joblib.load("/content/credit_scoring_project/app/model.pkl")
-explainer = joblib.load("/content/credit_scoring_project/app/shap_explainer.pkl")
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
+explainer = joblib.load(os.path.join(BASE_DIR, "shap_explainer.pkl"))
+
 # Initialize LabelEncoder (must match training)
 label_encoders = {}
 label_cols = ['Sex', 'Job', 'Housing', 'Saving_accounts', 'Checking_account', 'Purpose']
